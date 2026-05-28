@@ -1,0 +1,38 @@
+body {
+font-family: Arial;
+background: #0f172a;
+color: white;
+margin: 0;
+padding: 0;
+}
+
+header {
+text-align: center;
+padding: 30px;
+}
+
+.dashboard {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+padding: 20px;
+}
+
+.card {
+background: #1e293b;
+padding: 20px;
+border-radius: 10px;
+width: 220px;
+text-align: center;
+}
+
+.card p {
+font-size: 28px;
+font-weight: bold;
+}
+
+.info {
+padding: 30px;
+text-align: center;
+}
