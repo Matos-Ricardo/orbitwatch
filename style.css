@@ -1,51 +1,295 @@
-/* =========================
-   CONEXÃO ESPACIAL
-========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #03133a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* HERO */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #49a6ff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+/* INFO GRID */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background: #16295e;
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h2 {
+    color: #49a6ff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.info-card p {
+    line-height: 1.8;
+    font-size: 1.15rem;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.dashboard-card {
+    background: #16295e;
+    border-radius: 25px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(73,166,255,0.2);
+}
+
+.dashboard-card h2 {
+    color: #49a6ff;
+    margin-bottom: 25px;
+    font-size: 1.9rem;
+}
+
+.value {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.small-value {
+    font-size: 3rem;
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+/* BARRAS */
+
+.bar {
+    width: 100%;
+    height: 18px;
+    background: #04102d;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 30px;
+}
+
+.green {
+    background: linear-gradient(90deg, #1dc75b, #29ff78);
+}
+
+.blue {
+    background: linear-gradient(90deg, #2196f3, #49a6ff);
+}
+
+.orange {
+    background: linear-gradient(90deg, #ff9800, #ffbe3b);
+}
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.green-status {
+    background: #177f3f;
+}
+
+.blue-status {
+    background: #1565c0;
+}
+
+.orange-status {
+    background: #b97800;
+}
+
+/* REGIÃO */
+
+.region-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.region-card {
+    background: #16295e;
+    border-radius: 25px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.region-card h2 {
+    color: #49a6ff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.region-card h3 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 22px;
+    background: #04102d;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, #1bb9ff, #246cff);
+}
+
+.chart {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    margin-top: 30px;
+    height: 180px;
+}
+
+.chart-bar {
+    flex: 1;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(180deg, #5db9ff, #1657d8);
+}
+
+/* ALERTAS */
+
+.alerts-section {
+    margin-bottom: 60px;
+}
+
+.alerts-section h2 {
+    color: #49a6ff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.alert-card {
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.warning {
+    background: #7c5700;
+}
+
+.danger {
+    background: #7c1d1d;
+}
+
+.success {
+    background: #146b39;
+}
+
+/* CONEXÃO ESPACIAL */
 
 .space-section {
     margin-top: 70px;
-    padding: 20px;
+    margin-bottom: 50px;
 }
 
 .space-card {
-    background: linear-gradient(180deg, #11204d 0%, #0a1635 100%);
+    background: linear-gradient(180deg, #11204d 0%, #091632 100%);
     border-radius: 28px;
-    padding: 50px;
+    padding: 55px;
     border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 0 35px rgba(0,0,0,0.4);
+    box-shadow: 0 0 30px rgba(0,0,0,0.35);
 }
 
 .space-card h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #49a6ff;
     margin-bottom: 25px;
 }
 
 .space-description {
+    text-align: center;
     max-width: 900px;
     margin: auto;
-    text-align: center;
-    color: #dbe8ff;
-    font-size: 1.1rem;
+    color: #dce7ff;
     line-height: 1.9;
+    font-size: 1.2rem;
     margin-bottom: 45px;
 }
 
 .space-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 22px;
 }
 
 .space-item {
     background: rgba(255,255,255,0.05);
     border-radius: 22px;
-    padding: 24px;
+    padding: 25px;
     display: flex;
     gap: 18px;
-    align-items: flex-start;
-    transition: 0.3s ease;
+    transition: 0.3s;
     border: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -57,59 +301,67 @@
 
 .space-icon {
     font-size: 2.2rem;
-    min-width: 45px;
 }
 
 .space-item h3 {
     color: #49a6ff;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .space-item p {
-    color: #ffffff;
-    font-size: 0.96rem;
     line-height: 1.6;
+    color: white;
+    font-size: 1rem;
 }
 
 .space-footer {
     margin-top: 45px;
-    padding-top: 30px;
+    padding-top: 25px;
     border-top: 1px solid rgba(255,255,255,0.08);
     text-align: center;
 }
 
 .space-footer h3 {
-    color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
 .space-footer p {
-    color: #9fc8ff;
+    color: #9ec6ff;
     font-size: 1rem;
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media(max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .value {
+        font-size: 3rem;
+    }
+
+    .small-value {
+        font-size: 2.3rem;
+    }
 
     .space-card {
         padding: 30px 22px;
     }
 
     .space-card h2 {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
 
     .space-description {
         font-size: 1rem;
-    }
-
-    .space-grid {
-        grid-template-columns: 1fr;
     }
 
 }
