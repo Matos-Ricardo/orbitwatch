@@ -1,105 +1,9 @@
-/* =========================
-   RESET
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================
-   BODY
-========================= */
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #00154a;
-    color: white;
-    overflow-x: hidden;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    padding: 60px 0;
-}
-
-.logo {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #4aa3ff;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-size: 1.7rem;
-    color: #d8e6ff;
-    max-width: 900px;
-    line-height: 1.6;
-}
-
-/* =========================
-   INFO CARDS
-========================= */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
-}
-
-.info-card {
-    background: #18295c;
-    border-radius: 24px;
-    padding: 35px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-6px);
-}
-
-.info-card h3 {
-    color: #4aa3ff;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.info-card p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #e5eeff;
-}
-
-/* =========================
-   DASHBOARD
-========================= */
-
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 60px;
 }
-
-/* =========================
-   CARD
-========================= */
 
 .card {
     background: #18295c;
@@ -108,47 +12,28 @@ header {
     min-height: 320px;
     box-shadow: 0 0 25px rgba(0,0,0,0.35);
     transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 35px rgba(0,140,255,0.25);
 }
-
-/* =========================
-   TITULO CARD
-========================= */
 
 .card h2 {
     color: #4aa3ff;
     font-size: 2rem;
     margin-bottom: 30px;
-    line-height: 1.2;
 }
 
-/* =========================
-   NUMEROS GRANDES
-========================= */
-
 .big-number {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: white;
     margin-bottom: 25px;
-
-    /* impede quebra feia */
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: break-word;
     line-height: 1.1;
-}
 
-/* =========================
-   BARRA
-========================= */
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
 
 .progress-bar {
     width: 100%;
@@ -164,10 +49,6 @@ header {
     border-radius: 20px;
 }
 
-/* =========================
-   CORES
-========================= */
-
 .green {
     background: linear-gradient(90deg, #1ed760, #39ff88);
 }
@@ -180,19 +61,13 @@ header {
     background: linear-gradient(90deg, #ff9800, #ffc247);
 }
 
-/* =========================
-   STATUS
-========================= */
-
 .status {
     display: inline-block;
     padding: 12px 20px;
     border-radius: 30px;
     font-weight: bold;
     font-size: 1rem;
-    width: fit-content;
     color: white;
-    margin-top: 10px;
 }
 
 .status-green {
@@ -205,161 +80,4 @@ header {
 
 .status-orange {
     background: #b37a00;
-}
-
-/* =========================
-   REGION
-========================= */
-
-.region-section {
-    margin-top: 70px;
-}
-
-.region-card {
-    background: #18295c;
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-}
-
-.region-card h2 {
-    color: #4aa3ff;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.region-card p {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-}
-
-/* =========================
-   ALERTAS
-========================= */
-
-.alert-section {
-    margin-top: 70px;
-}
-
-.alert-title {
-    font-size: 3rem;
-    color: #4aa3ff;
-    margin-bottom: 35px;
-}
-
-.alert-box {
-    background: #4a3200;
-    border-left: 8px solid orange;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    line-height: 1.7;
-}
-
-/* =========================
-   INDUSTRIA ESPACIAL
-========================= */
-
-.space-section {
-    margin-top: 90px;
-    margin-bottom: 80px;
-    background: #081d57;
-    border-radius: 28px;
-    padding: 60px;
-    text-align: center;
-    box-shadow: 0 0 40px rgba(0,0,0,0.35);
-}
-
-.space-title {
-    color: #4aa3ff;
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-}
-
-.space-description {
-    font-size: 1.3rem;
-    color: #dce7ff;
-    max-width: 1000px;
-    margin: auto;
-    line-height: 1.8;
-    margin-bottom: 50px;
-}
-
-.space-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-.space-card {
-    background: #132a69;
-    border-radius: 22px;
-    padding: 30px;
-    transition: 0.3s;
-}
-
-.space-card:hover {
-    transform: translateY(-6px);
-    background: #19357f;
-}
-
-.space-icon {
-    font-size: 2.5rem;
-    margin-bottom: 18px;
-}
-
-.space-card h3 {
-    color: #4aa3ff;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.space-card p {
-    color: #d7e4ff;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    margin-top: 50px;
-    text-align: center;
-    color: #c8d9ff;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media(max-width: 768px) {
-
-    .logo {
-        font-size: 3rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .card {
-        min-height: auto;
-    }
-
-    .big-number {
-        font-size: 3rem;
-    }
-
-    .space-title {
-        font-size: 2.3rem;
-    }
-
-    .alert-title {
-        font-size: 2.2rem;
-    }
 }
