@@ -1,21 +1,29 @@
-function atualizarDados() {
+function randomTemp() {
+  return Math.floor(Math.random() * 12) + 24;
+}
 
-  const temperaturas = [24, 26, 28, 30, 32];
-  const umidades = [40, 50, 65, 70, 80];
-  const riscos = ["Baixo", "Moderado", "Alto"];
+function randomHumidity() {
+  return Math.floor(Math.random() * 30) + 40;
+}
 
-  const temp =
-    temperaturas[Math.floor(Math.random() * temperaturas.length)];
+function updateDashboard() {
 
-  const humidity =
-    umidades[Math.floor(Math.random() * umidades.length)];
-
-  const fire =
-    riscos[Math.floor(Math.random() * riscos.length)];
+  const temp = randomTemp();
+  const humidity = randomHumidity();
 
   document.getElementById("temp").innerText = temp + "°C";
   document.getElementById("humidity").innerText = humidity + "%";
-  document.getElementById("fire").innerText = fire;
+
+  const fire = document.getElementById("fire");
+
+  if(temp >= 32){
+    fire.innerText = "Alto";
+  } else if(temp >= 28){
+    fire.innerText = "Moderado";
+  } else {
+    fire.innerText = "Baixo";
+  }
+
 }
 
-setInterval(atualizarDados, 4000);
+setInterval(updateDashboard, 4000);

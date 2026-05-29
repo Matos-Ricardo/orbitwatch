@@ -9,90 +9,124 @@
 <body>
 
   <header class="hero">
-    <h1>🛰️ OrbitWatch</h1>
-    <p>
-      Plataforma de monitoramento climático baseada em satélites.
-    </p>
+    <div class="overlay"></div>
 
-    <div class="hero-info">
-      <div class="info-box">
-        <h3>ODS</h3>
-        <p>ODS 13 - Ação Contra a Mudança Global do Clima</p>
-      </div>
+    <div class="hero-content">
+      <h1>🛰️ OrbitWatch</h1>
+      <p>
+        Plataforma inteligente de monitoramento climático baseada em satélites
+        para prevenção de desastres ambientais.
+      </p>
 
-      <div class="info-box">
-        <h3>Objetivo</h3>
-        <p>
-          Monitorar regiões vulneráveis usando dados simulados
-          de sensoriamento remoto via satélite.
-        </p>
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h3>🌍 ODS</h3>
+          <p>
+            ODS 13 - Ação Contra a Mudança Global do Clima
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>🚀 Objetivo</h3>
+          <p>
+            Monitorar regiões vulneráveis utilizando dados simulados
+            de sensoriamento remoto via satélite.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>📡 Satélite</h3>
+          <p>
+            OrbitWatch-01 em órbita terrestre baixa realizando
+            análise climática em tempo real.
+          </p>
+        </div>
+
       </div>
     </div>
   </header>
 
   <main class="dashboard">
 
-    <section class="card">
-      <h2>🌡️ Temperatura</h2>
-      <p id="temp">28°C</p>
-      <span>Dados climáticos orbitais</span>
+    <section class="cards">
+
+      <div class="card">
+        <h2>🌡️ Temperatura</h2>
+        <p id="temp">28°C</p>
+        <span class="status normal">Estável</span>
+      </div>
+
+      <div class="card">
+        <h2>💧 Umidade</h2>
+        <p id="humidity">40%</p>
+        <span class="status normal">Normal</span>
+      </div>
+
+      <div class="card">
+        <h2>🔥 Risco de Incêndio</h2>
+        <p id="fire">Moderado</p>
+        <span class="status warning">Alerta Médio</span>
+      </div>
+
+      <div class="card">
+        <h2>🛰️ Status do Satélite</h2>
+        <p>Online</p>
+        <span class="status online">Operacional</span>
+      </div>
+
     </section>
 
-    <section class="card">
-      <h2>💧 Umidade</h2>
-      <p id="humidity">65%</p>
-      <span>Monitoramento atmosférico</span>
+    <section class="panel-section">
+
+      <div class="panel">
+        <h2>📍 Região Monitorada</h2>
+        <p>Amazônia Brasileira</p>
+
+        <div class="bar">
+          <div class="fill"></div>
+        </div>
+
+        <small>73% da área analisada</small>
+      </div>
+
+      <div class="panel">
+        <h2>📈 Telemetria Climática</h2>
+
+        <div class="graph">
+          <div class="line l1"></div>
+          <div class="line l2"></div>
+          <div class="line l3"></div>
+          <div class="line l4"></div>
+          <div class="line l5"></div>
+          <div class="line l6"></div>
+          <div class="line l7"></div>
+        </div>
+
+        <small>Últimas 24 horas</small>
+      </div>
+
     </section>
 
-    <section class="card">
-      <h2>🔥 Risco de Incêndio</h2>
-      <p id="fire">Baixo</p>
-      <span>Análise preventiva via satélite</span>
-    </section>
+    <section class="alerts">
 
-    <section class="card">
-      <h2>🛰️ Satélites Ativos</h2>
-      <p>12</p>
-      <span>Satélites conectados ao sistema</span>
-    </section>
+      <h2>🚨 Alertas Ambientais</h2>
 
-    <section class="card">
-      <h2>🌍 Região Monitorada</h2>
-      <p>Mato Grosso</p>
-      <span>Agronegócio e clima</span>
-    </section>
+      <div class="alert warning-alert">
+        ⚠️ Temperatura acima da média detectada no setor norte.
+      </div>
 
-    <section class="card">
-      <h2>📡 Status da Rede</h2>
-      <p class="online">ONLINE</p>
-      <span>Infraestrutura Azure operacional</span>
+      <div class="alert ok-alert">
+        ✅ Satélite OrbitWatch-01 operando normalmente.
+      </div>
+
     </section>
 
   </main>
 
-  <section class="about">
-    <h2>Sobre o Projeto</h2>
-
-    <p>
-      O OrbitWatch é uma solução em cloud computing hospedada no Microsoft Azure,
-      criada para simular o monitoramento climático via satélite.
-    </p>
-
-    <p>
-      A plataforma pode auxiliar:
-    </p>
-
-    <ul>
-      <li>🌱 Agronegócio</li>
-      <li>🔥 Prevenção de incêndios</li>
-      <li>🌧️ Monitoramento climático</li>
-      <li>🛰️ Sensoriamento remoto</li>
-    </ul>
-  </section>
-
   <footer>
     <p>
-      Desenvolvido para a Global Solution - FIAP
+      OrbitWatch © 2026 | Global Solution FIAP | Cloud Computing & DevSecOps
     </p>
   </footer>
 
