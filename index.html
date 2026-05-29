@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>OrbitWatch</title>
 
   <link rel="stylesheet" href="style.css">
@@ -12,84 +14,126 @@
 
   <div class="container">
 
+    <!-- HERO -->
+
     <header class="hero">
+
       <h1>🛰️ OrbitWatch</h1>
 
       <p class="subtitle">
-        Plataforma inteligente de monitoramento climático baseada em satélites para
-        prevenção de desastres ambientais.
+        Plataforma inteligente de monitoramento climático baseada em satélites
+        para prevenção de desastres ambientais.
       </p>
 
       <div class="top-info">
 
         <div class="info-card">
           <h3>🌍 ODS</h3>
-          <p>ODS 13 - Ação Contra a Mudança Global do Clima</p>
+
+          <p>
+            ODS 13 - Ação Contra a Mudança Global do Clima
+          </p>
         </div>
 
         <div class="info-card">
           <h3>🚀 Objetivo</h3>
+
           <p>
-            Monitorar regiões vulneráveis utilizando sensoriamento remoto via satélite.
+            Monitorar regiões vulneráveis utilizando dados simulados de
+            sensoriamento remoto via satélite.
           </p>
         </div>
 
         <div class="info-card">
           <h3>📡 Satélite</h3>
+
           <p>
-            OrbitWatch-01 em órbita baixa terrestre realizando análise climática em tempo real.
+            OrbitWatch-01 em órbita terrestre baixa realizando análise
+            climática em tempo real.
           </p>
         </div>
 
       </div>
+
     </header>
+
+    <!-- DASHBOARD -->
 
     <section class="dashboard">
 
+      <!-- TEMPERATURA -->
+
       <div class="card temperatura">
+
         <h2>🌡️ Temperatura</h2>
 
-        <div class="big-number" id="temp">28°C</div>
+        <div class="big-number" id="temp">
+          28°C
+        </div>
 
         <div class="risk-bar">
           <div class="risk-fill temp-fill"></div>
         </div>
 
-        <span class="status green" id="tempStatus">Estável</span>
+        <span class="status green" id="tempStatus">
+          Estável
+        </span>
+
       </div>
 
+      <!-- UMIDADE -->
+
       <div class="card umidade">
+
         <h2>💧 Umidade</h2>
 
-        <div class="big-number" id="humidity">55%</div>
+        <div class="big-number" id="humidity">
+          55%
+        </div>
 
         <div class="risk-bar">
           <div class="risk-fill humidity-fill"></div>
         </div>
 
-        <span class="status blue" id="humidityStatus">Normal</span>
+        <span class="status blue" id="humidityStatus">
+          Normal
+        </span>
+
       </div>
 
+      <!-- INCÊNDIO -->
+
       <div class="card incendio">
+
         <h2>🔥 Risco de Incêndio</h2>
 
-        <div class="big-number" id="fireRisk">Moderado</div>
+        <div class="big-number" id="fireRisk">
+          Moderado
+        </div>
 
         <div class="risk-meter">
           <div class="meter level-2" id="fireMeter"></div>
         </div>
 
-        <span class="status yellow" id="fireStatus">Alerta Médio</span>
+        <span class="status yellow" id="fireStatus">
+          Alerta Médio
+        </span>
+
       </div>
 
+      <!-- SATÉLITE -->
+
       <div class="card satellite">
+
         <h2>🛰️ Status do Satélite</h2>
 
         <div class="satellite-status online">
           ● ONLINE
         </div>
 
-        <p>Última transmissão:</p>
+        <p>
+          Última transmissão:
+        </p>
 
         <div class="big-small" id="lastUpdate">
           12 segundos atrás
@@ -106,13 +150,19 @@
 
     </section>
 
+    <!-- SEÇÃO MONITORAMENTO -->
+
     <section class="bottom-grid">
+
+      <!-- REGIÃO -->
 
       <div class="large-card">
 
         <h2>📍 Região Monitorada</h2>
 
-        <p class="region-name">Amazônia Brasileira</p>
+        <p class="region-name">
+          Amazônia Brasileira
+        </p>
 
         <div class="progress-container">
           <div class="progress-bar" id="progressBar"></div>
@@ -123,6 +173,8 @@
         </div>
 
       </div>
+
+      <!-- TELEMETRIA -->
 
       <div class="large-card">
 
@@ -140,11 +192,15 @@
 
         </div>
 
-        <p>Últimas 24 horas</p>
+        <p>
+          Dados das últimas 24 horas coletados por satélite.
+        </p>
 
       </div>
 
     </section>
+
+    <!-- ALERTAS -->
 
     <section class="alerts">
 
@@ -164,9 +220,55 @@
 
     </section>
 
+    <!-- CONEXÃO ESPACIAL -->
+
+    <section class="space-section">
+
+      <h2>🛰️ Conexão com a Indústria Espacial</h2>
+
+      <p>
+        O OrbitWatch utiliza conceitos de sensoriamento remoto e telemetria
+        via satélite para monitoramento ambiental em tempo real.
+      </p>
+
+      <p>
+        A solução simula a coleta de dados orbitais utilizados para detectar:
+      </p>
+
+      <ul>
+
+        <li>🔥 Risco de incêndios florestais</li>
+
+        <li>🌡️ Variações climáticas extremas</li>
+
+        <li>💧 Mudanças de umidade em regiões críticas</li>
+
+        <li>🌎 Monitoramento remoto da Amazônia</li>
+
+        <li>📡 Comunicação e análise via satélite</li>
+
+      </ul>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+      <p>
+        OrbitWatch © 2026
+      </p>
+
+      <p>
+        Desenvolvido para Global Solution FIAP - Cloud Computing & Space Tech
+      </p>
+
+    </footer>
+
   </div>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
