@@ -1,295 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrbitWatch</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OrbitWatch</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <!-- HERO -->
+    <header class="hero">
+      <h1>🛰️ OrbitWatch</h1>
+      <p>
+        Plataforma inteligente de monitoramento climático baseada em satélites
+        para prevenção de desastres ambientais.
+      </p>
+    </header>
 
-        <header class="hero">
+    <section class="info-grid">
 
-            <h1 class="logo">
-                🛰️ OrbitWatch
-            </h1>
+      <div class="info-card">
+        <h3>🌍 ODS</h3>
+        <p>
+          ODS 13 - Ação Contra a Mudança Global do Clima
+        </p>
+      </div>
 
-            <p class="subtitle">
-                Plataforma inteligente de monitoramento climático baseada em satélites
-                para prevenção de desastres ambientais.
-            </p>
+      <div class="info-card">
+        <h3>🚀 Objetivo</h3>
+        <p>
+          Monitorar regiões vulneráveis utilizando dados simulados de
+          sensoriamento remoto via satélite.
+        </p>
+      </div>
 
-            <div class="info-grid">
+      <div class="info-card">
+        <h3>📡 Satélite</h3>
+        <p>
+          OrbitWatch-01 em órbita terrestre baixa realizando análise climática em tempo real.
+        </p>
+      </div>
 
-                <div class="info-card">
-                    <h3>🌎 ODS</h3>
+    </section>
 
-                    <p>
-                        ODS 13 - Ação Contra a Mudança Global do Clima
-                    </p>
-                </div>
+    <section class="dashboard-grid">
 
-                <div class="info-card">
-                    <h3>🚀 Objetivo</h3>
+      <div class="dashboard-card">
+        <h2>🌡️ Temperatura</h2>
+        <div class="value" id="temp">29°C</div>
 
-                    <p>
-                        Monitorar regiões vulneráveis utilizando dados simulados
-                        de sensoriamento remoto via satélite.
-                    </p>
-                </div>
+        <div class="progress">
+          <div class="progress-fill green" style="width: 60%;"></div>
+        </div>
 
-                <div class="info-card">
-                    <h3>🛰️ Satélite</h3>
+        <span class="status green-status">Estável</span>
+      </div>
 
-                    <p>
-                        OrbitWatch-01 em órbita terrestre baixa realizando
-                        análise climática em tempo real.
-                    </p>
-                </div>
+      <div class="dashboard-card">
+        <h2>💧 Umidade</h2>
+        <div class="value" id="humidity">45%</div>
 
-            </div>
+        <div class="progress">
+          <div class="progress-fill blue" style="width: 55%;"></div>
+        </div>
 
-        </header>
+        <span class="status blue-status">Normal</span>
+      </div>
 
-        <!-- DASHBOARD -->
+      <div class="dashboard-card">
+        <h2>🔥 Risco de Incêndio</h2>
+        <div class="value risk-text" id="risk">Moderado</div>
 
-        <section class="dashboard-grid">
+        <div class="progress">
+          <div class="progress-fill orange" style="width: 65%;"></div>
+        </div>
 
-            <!-- TEMPERATURA -->
+        <span class="status orange-status">Alerta Médio</span>
+      </div>
 
-            <div class="card">
+      <div class="dashboard-card">
+        <h2>🛰️ Status do Satélite</h2>
+        <div class="value satellite-text">Operacional</div>
 
-                <h2>🌡️ Temperatura</h2>
+        <div class="progress">
+          <div class="progress-fill green" style="width: 95%;"></div>
+        </div>
 
-                <div class="big-number" id="temp">
-                    29°C
-                </div>
+        <span class="status green-status">Órbita sincronizada</span>
+      </div>
 
-                <div class="progress-bar">
-                    <div class="progress green" style="width: 60%"></div>
-                </div>
+    </section>
 
-                <div class="status status-green">
-                    Estável
-                </div>
+    <section class="bottom-grid">
 
-            </div>
+      <div class="bottom-card">
+        <h2>📍 Região Monitorada</h2>
 
-            <!-- UMIDADE -->
+        <h3>Amazônia Brasileira</h3>
 
-            <div class="card">
+        <div class="progress big-progress">
+          <div class="progress-fill cyan" style="width: 73%;"></div>
+        </div>
 
-                <h2>💧 Umidade</h2>
+        <p class="small-text">73% da área analisada</p>
+      </div>
 
-                <div class="big-number" id="humidity">
-                    55%
-                </div>
+      <div class="bottom-card">
+        <h2>📈 Telemetria Climática</h2>
 
-                <div class="progress-bar">
-                    <div class="progress blue" style="width: 55%"></div>
-                </div>
+        <div class="chart">
 
-                <div class="status status-blue">
-                    Normal
-                </div>
+          <div class="bar" style="height: 80px;"></div>
+          <div class="bar" style="height: 120px;"></div>
+          <div class="bar" style="height: 160px;"></div>
+          <div class="bar" style="height: 210px;"></div>
+          <div class="bar" style="height: 140px;"></div>
+          <div class="bar" style="height: 180px;"></div>
+          <div class="bar" style="height: 100px;"></div>
 
-            </div>
+        </div>
 
-            <!-- INCÊNDIO -->
+        <p class="small-text">Últimas 24 horas</p>
+      </div>
 
-            <div class="card">
+    </section>
 
-                <h2>🔥 Risco de Incêndio</h2>
+    <section class="alerts">
 
-                <div class="big-number" id="fire">
-                    Moderado
-                </div>
+      <h2>🚨 Alertas Ambientais</h2>
 
-                <div class="progress-bar">
-                    <div class="progress orange" style="width: 65%"></div>
-                </div>
+      <div class="alert-box">
+        ⚠️ Temperatura acima da média detectada no setor norte.
+      </div>
 
-                <div class="status status-orange">
-                    Alerta Médio
-                </div>
+      <div class="alert-box">
+        🔥 Possível foco de incêndio identificado via satélite.
+      </div>
 
-            </div>
+      <div class="alert-box success">
+        ✅ Satélite operando normalmente sem perda de sinal.
+      </div>
 
-            <!-- SATÉLITE -->
+    </section>
 
-            <div class="card">
+    <section class="space-section">
 
-                <h2>🛰️ Status do Satélite</h2>
+      <h2>🛰️ Conexão com a Indústria Espacial</h2>
 
-                <div class="big-number" id="satellite">
-                    Operacional
-                </div>
+      <p class="space-description">
+        O OrbitWatch utiliza tecnologias de sensoriamento remoto,
+        telemetria orbital e monitoramento climático via satélite
+        para acompanhar regiões vulneráveis em tempo real.
+      </p>
 
-                <div class="progress-bar">
-                    <div class="progress green" style="width: 95%"></div>
-                </div>
+      <div class="space-grid">
 
-                <div class="status status-green">
-                    Órbita sincronizada
-                </div>
+        <div class="space-card">
+          <div class="icon">🔥</div>
+          <h3>Incêndios Florestais</h3>
+          <p>Detecção preventiva de focos de calor e queimadas.</p>
+        </div>
 
-            </div>
+        <div class="space-card">
+          <div class="icon">🌡️</div>
+          <h3>Clima Extremo</h3>
+          <p>Identificação de variações críticas de temperatura.</p>
+        </div>
 
-        </section>
+        <div class="space-card">
+          <div class="icon">💧</div>
+          <h3>Umidade</h3>
+          <p>Monitoramento de regiões com baixa umidade do solo.</p>
+        </div>
 
-        <!-- REGIÃO -->
+        <div class="space-card">
+          <div class="icon">🌎</div>
+          <h3>Amazônia</h3>
+          <p>Observação remota da floresta amazônica brasileira.</p>
+        </div>
 
-        <section class="region-grid">
+      </div>
 
-            <div class="region-card">
+      <footer class="footer">
+        OrbitWatch © 2026 <br>
+        Desenvolvido para Global Solution FIAP - Cloud Computing & Space Tech
+      </footer>
 
-                <h2>📍 Região Monitorada</h2>
+    </section>
 
-                <p class="region-name">
-                    Amazônia Brasileira
-                </p>
+  </div>
 
-                <div class="progress-bar">
-                    <div class="progress blue" style="width: 73%"></div>
-                </div>
-
-                <span class="region-status">
-                    73% da área analisada
-                </span>
-
-            </div>
-
-            <!-- TELEMETRIA -->
-
-            <div class="telemetry-card">
-
-                <h2>📈 Telemetria Climática</h2>
-
-                <div class="chart">
-
-                    <div class="bar h1"></div>
-                    <div class="bar h2"></div>
-                    <div class="bar h3"></div>
-                    <div class="bar h4"></div>
-                    <div class="bar h5"></div>
-                    <div class="bar h6"></div>
-
-                </div>
-
-                <p>
-                    Últimas 24 horas
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- ALERTAS -->
-
-        <section class="alert-section">
-
-            <h2 class="alert-title">
-                🚨 Alertas Ambientais
-            </h2>
-
-            <div class="alert-box">
-                ⚠️ Temperatura acima da média detectada no setor norte.
-            </div>
-
-            <div class="alert-box">
-                🔥 Possível foco de incêndio identificado via satélite.
-            </div>
-
-            <div class="alert-box">
-                ✅ Satélite operando normalmente sem perda de sinal.
-            </div>
-
-        </section>
-
-        <!-- ESPACIAL -->
-
-        <section class="space-section">
-
-            <h2 class="space-title">
-                🛰️ Conexão com a Indústria Espacial
-            </h2>
-
-            <p class="space-description">
-                O OrbitWatch utiliza conceitos de sensoriamento remoto e telemetria via satélite
-                para monitoramento ambiental em tempo real.
-            </p>
-
-            <div class="space-grid">
-
-                <div class="space-card">
-                    <div class="space-icon">🔥</div>
-
-                    <h3>Incêndios Florestais</h3>
-
-                    <p>
-                        Detecção preventiva de focos de calor e queimadas.
-                    </p>
-                </div>
-
-                <div class="space-card">
-                    <div class="space-icon">🌡️</div>
-
-                    <h3>Clima Extremo</h3>
-
-                    <p>
-                        Identificação de variações críticas de temperatura.
-                    </p>
-                </div>
-
-                <div class="space-card">
-                    <div class="space-icon">💧</div>
-
-                    <h3>Umidade</h3>
-
-                    <p>
-                        Monitoramento de regiões com baixa umidade do solo.
-                    </p>
-                </div>
-
-                <div class="space-card">
-                    <div class="space-icon">🌎</div>
-
-                    <h3>Amazônia</h3>
-
-                    <p>
-                        Observação remota da floresta amazônica brasileira.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FOOTER -->
-
-        <footer>
-
-            <p>
-                OrbitWatch © 2026
-            </p>
-
-            <p>
-                Desenvolvido para Global Solution FIAP - Cloud Computing & Space Tech
-            </p>
-
-        </footer>
-
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
