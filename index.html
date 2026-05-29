@@ -8,45 +8,95 @@
 </head>
 <body>
 
-  <div class="container">
-
+  <header class="hero">
     <h1>🛰️ OrbitWatch</h1>
-    <p>Monitoramento climático via satélite</p>
+    <p>
+      Plataforma de monitoramento climático baseada em satélites.
+    </p>
 
-    <div class="card">
+    <div class="hero-info">
+      <div class="info-box">
+        <h3>ODS</h3>
+        <p>ODS 13 - Ação Contra a Mudança Global do Clima</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Objetivo</h3>
+        <p>
+          Monitorar regiões vulneráveis usando dados simulados
+          de sensoriamento remoto via satélite.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <section class="card">
       <h2>🌡️ Temperatura</h2>
       <p id="temp">28°C</p>
-    </div>
+      <span>Dados climáticos orbitais</span>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <h2>💧 Umidade</h2>
       <p id="humidity">65%</p>
-    </div>
+      <span>Monitoramento atmosférico</span>
+    </section>
 
-    <div class="card">
-      <h2>🔥 Risco de incêndio</h2>
+    <section class="card">
+      <h2>🔥 Risco de Incêndio</h2>
       <p id="fire">Baixo</p>
-    </div>
+      <span>Análise preventiva via satélite</span>
+    </section>
 
-    <div class="card">
-      <h2>🛰️ Satélite</h2>
-      <p>OrbitSat-01</p>
-    </div>
+    <section class="card">
+      <h2>🛰️ Satélites Ativos</h2>
+      <p>12</p>
+      <span>Satélites conectados ao sistema</span>
+    </section>
 
-    <div class="about">
-      <h2>Sobre a solução</h2>
-      <p>
-        O OrbitWatch é uma solução de monitoramento climático via satélite
-        para detectar riscos ambientais em áreas remotas.
-      </p>
+    <section class="card">
+      <h2>🌍 Região Monitorada</h2>
+      <p>Mato Grosso</p>
+      <span>Agronegócio e clima</span>
+    </section>
 
-      <p>
-        Conectado ao ODS 13 - Ação Contra a Mudança Global do Clima.
-      </p>
-    </div>
+    <section class="card">
+      <h2>📡 Status da Rede</h2>
+      <p class="online">ONLINE</p>
+      <span>Infraestrutura Azure operacional</span>
+    </section>
 
-  </div>
+  </main>
+
+  <section class="about">
+    <h2>Sobre o Projeto</h2>
+
+    <p>
+      O OrbitWatch é uma solução em cloud computing hospedada no Microsoft Azure,
+      criada para simular o monitoramento climático via satélite.
+    </p>
+
+    <p>
+      A plataforma pode auxiliar:
+    </p>
+
+    <ul>
+      <li>🌱 Agronegócio</li>
+      <li>🔥 Prevenção de incêndios</li>
+      <li>🌧️ Monitoramento climático</li>
+      <li>🛰️ Sensoriamento remoto</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Desenvolvido para a Global Solution - FIAP
+    </p>
+  </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
