@@ -8,6 +8,7 @@
 body{
   background:#030b1f;
   color:white;
+  overflow-x:hidden;
 }
 
 .hero{
@@ -29,14 +30,14 @@ body{
 
 .hero p{
   font-size:24px;
-  max-width:800px;
+  max-width:850px;
   line-height:1.5;
 }
 
 .info-grid{
   margin-top:50px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
 }
 
@@ -45,15 +46,23 @@ body{
   padding:30px;
   border-radius:18px;
   transition:0.3s;
+  border:1px solid rgba(255,255,255,0.05);
 }
 
 .info-card:hover{
   transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(0,162,255,0.2);
 }
 
 .info-card h3{
   color:#4db5ff;
   margin-bottom:15px;
+  font-size:26px;
+}
+
+.info-card p{
+  font-size:18px;
+  line-height:1.6;
 }
 
 .dashboard{
@@ -62,37 +71,44 @@ body{
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
 
 .card{
   background:#132348;
   padding:35px;
-  border-radius:20px;
+  border-radius:22px;
   transition:0.3s;
-  box-shadow:0 0 20px rgba(0,0,0,0.2);
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
+  border:1px solid rgba(255,255,255,0.04);
 }
 
 .card:hover{
-  transform:scale(1.03);
+  transform:translateY(-5px);
+  box-shadow:0 0 30px rgba(0,162,255,0.25);
 }
 
 .card h2{
-  margin-bottom:20px;
+  margin-bottom:25px;
   color:#58b7ff;
+  font-size:34px;
+  line-height:1.3;
 }
 
 .card p{
-  font-size:48px;
+  font-size:58px;
   font-weight:bold;
-  margin-bottom:15px;
+  margin-bottom:20px;
+  word-break:break-word;
 }
 
 .status{
-  padding:8px 14px;
-  border-radius:20px;
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:25px;
   font-size:14px;
+  font-weight:bold;
 }
 
 .normal{
@@ -117,17 +133,24 @@ body{
 .panel{
   background:#132348;
   padding:35px;
-  border-radius:20px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.04);
 }
 
 .panel h2{
   margin-bottom:25px;
   color:#58b7ff;
+  font-size:32px;
+}
+
+.panel p{
+  font-size:24px;
+  margin-bottom:15px;
 }
 
 .bar{
   width:100%;
-  height:20px;
+  height:22px;
   background:#09152f;
   border-radius:20px;
   overflow:hidden;
@@ -138,10 +161,21 @@ body{
   width:73%;
   height:100%;
   background:linear-gradient(90deg,#00c3ff,#005eff);
+  animation:loading 4s infinite alternate;
+}
+
+@keyframes loading{
+  from{
+    width:55%;
+  }
+
+  to{
+    width:90%;
+  }
 }
 
 .graph{
-  height:180px;
+  height:200px;
   display:flex;
   align-items:flex-end;
   gap:10px;
@@ -151,6 +185,7 @@ body{
   flex:1;
   background:linear-gradient(180deg,#58b7ff,#005eff);
   border-radius:10px 10px 0 0;
+  animation:pulse 3s infinite alternate;
 }
 
 .l1{height:40%;}
@@ -161,20 +196,32 @@ body{
 .l6{height:80%;}
 .l7{height:50%;}
 
+@keyframes pulse{
+  from{
+    opacity:0.5;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
 .alerts{
-  margin-top:50px;
+  margin-top:60px;
 }
 
 .alerts h2{
-  margin-bottom:20px;
+  margin-bottom:25px;
   color:#58b7ff;
+  font-size:38px;
 }
 
 .alert{
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:15px;
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:18px;
   font-weight:bold;
+  font-size:18px;
 }
 
 .warning-alert{
@@ -186,9 +233,76 @@ body{
 }
 
 footer{
-  margin-top:60px;
-  padding:30px;
+  margin-top:70px;
+  padding:35px;
   text-align:center;
   background:#020817;
   color:#8da3c7;
+  font-size:16px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:20px;
+  }
+
+  .card p{
+    font-size:44px;
+  }
+
+  .card h2{
+    font-size:28px;
+  }
+
+  .panel h2{
+    font-size:26px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:60px 7%;
+  }
+
+  .dashboard{
+    padding:40px 7%;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .card{
+    padding:28px;
+  }
+
+  .card p{
+    font-size:38px;
+  }
+
+  .card h2{
+    font-size:24px;
+  }
+
+  .panel{
+    padding:28px;
+  }
+
+  .alerts h2{
+    font-size:30px;
+  }
+
 }
