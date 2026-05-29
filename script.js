@@ -1,48 +1,58 @@
-function randomTemp() {
-  return Math.floor(Math.random() * 14) + 22;
+function updateDashboard(){
+
+    const temperature = Math.floor(Math.random() * 15) + 20;
+    const humidity = Math.floor(Math.random() * 40) + 40;
+
+    const risks = [
+        {
+            text:"Baixo",
+            class:"green",
+            meter:"level-1",
+            alert:"Seguro"
+        },
+        {
+            text:"Moderado",
+            class:"yellow",
+            meter:"level-2",
+            alert:"Alerta Médio"
+        },
+        {
+            text:"Crítico",
+            class:"red",
+            meter:"level-3",
+            alert:"Emergência"
+        }
+    ];
+
+    const risk = risks[Math.floor(Math.random() * risks.length)];
+
+    document.getElementById("temp").innerText =
+        temperature + "°C";
+
+    document.getElementById("humidity").innerText =
+        humidity + "%";
+
+    document.getElementById("fireRisk").innerText =
+        risk.text;
+
+    document.getElementById("fireStatus").innerText =
+        risk.alert;
+
+    document.getElementById("fireStatus").className =
+        "status " + risk.class;
+
+    document.getElementById("fireMeter").className =
+        "meter " + risk.meter;
+
+    const coverage =
+        Math.floor(Math.random() * 30) + 70;
+
+    document.getElementById("progressBar").style.width =
+        coverage + "%";
+
+    document.getElementById("coverageText").innerText =
+        coverage + "% da área monitorada";
+
 }
 
-function randomHumidity() {
-  return Math.floor(Math.random() * 40) + 35;
-}
-
-function randomSatellite() {
-  const status = [
-    "Operacional",
-    "Escaneando",
-    "Transmitindo",
-    "Online"
-  ];
-
-  return status[Math.floor(Math.random() * status.length)];
-}
-
-function updateDashboard() {
-
-  const temp = randomTemp();
-  const humidity = randomHumidity();
-
-  document.getElementById("temp").innerText = temp + "°C";
-  document.getElementById("humidity").innerText = humidity + "%";
-
-  const fire = document.getElementById("fire");
-
-  if(temp >= 33){
-    fire.innerText = "Crítico";
-  }
-  else if(temp >= 29){
-    fire.innerText = "Moderado";
-  }
-  else{
-    fire.innerText = "Baixo";
-  }
-
-  const statusText = document.querySelector(".online");
-
-  statusText.innerText = randomSatellite();
-
-}
-
-updateDashboard();
-
-setInterval(updateDashboard, 3000);
+setInterval(updateDashboard, 4000);

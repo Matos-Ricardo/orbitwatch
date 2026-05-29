@@ -1,109 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OrbitWatch</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="hero">
-    <div class="overlay"></div>
+  <div class="container">
 
-    <div class="hero-content">
+    <header class="hero">
       <h1>🛰️ OrbitWatch</h1>
-      <p>
-        Plataforma inteligente de monitoramento climático baseada em satélites
-        para prevenção de desastres ambientais.
+
+      <p class="subtitle">
+        Plataforma inteligente de monitoramento climático baseada em satélites para
+        prevenção de desastres ambientais.
       </p>
 
-      <div class="info-grid">
+      <div class="top-info">
 
         <div class="info-card">
           <h3>🌍 ODS</h3>
-          <p>
-            ODS 13 - Ação Contra a Mudança Global do Clima
-          </p>
+          <p>ODS 13 - Ação Contra a Mudança Global do Clima</p>
         </div>
 
         <div class="info-card">
           <h3>🚀 Objetivo</h3>
           <p>
-            Monitorar regiões vulneráveis utilizando dados simulados
-            de sensoriamento remoto via satélite.
+            Monitorar regiões vulneráveis utilizando sensoriamento remoto via satélite.
           </p>
         </div>
 
         <div class="info-card">
           <h3>📡 Satélite</h3>
           <p>
-            OrbitWatch-01 em órbita terrestre baixa realizando
-            análise climática em tempo real.
+            OrbitWatch-01 em órbita baixa terrestre realizando análise climática em tempo real.
           </p>
         </div>
 
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="dashboard">
+    <section class="dashboard">
 
-    <section class="cards">
-
-      <div class="card">
+      <div class="card temperatura">
         <h2>🌡️ Temperatura</h2>
-        <p id="temp">28°C</p>
-        <span class="status normal">Estável</span>
+
+        <div class="big-number" id="temp">28°C</div>
+
+        <div class="risk-bar">
+          <div class="risk-fill temp-fill"></div>
+        </div>
+
+        <span class="status green" id="tempStatus">Estável</span>
       </div>
 
-      <div class="card">
+      <div class="card umidade">
         <h2>💧 Umidade</h2>
-        <p id="humidity">40%</p>
-        <span class="status normal">Normal</span>
+
+        <div class="big-number" id="humidity">55%</div>
+
+        <div class="risk-bar">
+          <div class="risk-fill humidity-fill"></div>
+        </div>
+
+        <span class="status blue" id="humidityStatus">Normal</span>
       </div>
 
-      <div class="card">
+      <div class="card incendio">
         <h2>🔥 Risco de Incêndio</h2>
-        <p id="fire">Moderado</p>
-        <span class="status warning">Alerta Médio</span>
+
+        <div class="big-number" id="fireRisk">Moderado</div>
+
+        <div class="risk-meter">
+          <div class="meter level-2" id="fireMeter"></div>
+        </div>
+
+        <span class="status yellow" id="fireStatus">Alerta Médio</span>
       </div>
 
-      <div class="card">
+      <div class="card satellite">
         <h2>🛰️ Status do Satélite</h2>
-        <p>Online</p>
-        <span class="status online">Operacional</span>
+
+        <div class="satellite-status online">
+          ● ONLINE
+        </div>
+
+        <p>Última transmissão:</p>
+
+        <div class="big-small" id="lastUpdate">
+          12 segundos atrás
+        </div>
+
+        <div class="signal-bars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
 
     </section>
 
-    <section class="panel-section">
+    <section class="bottom-grid">
 
-      <div class="panel">
+      <div class="large-card">
+
         <h2>📍 Região Monitorada</h2>
-        <p>Amazônia Brasileira</p>
 
-        <div class="bar">
-          <div class="fill"></div>
+        <p class="region-name">Amazônia Brasileira</p>
+
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
         </div>
 
-        <small>73% da área analisada</small>
+        <div class="progress-text" id="coverageText">
+          73% da área monitorada
+        </div>
+
       </div>
 
-      <div class="panel">
+      <div class="large-card">
+
         <h2>📈 Telemetria Climática</h2>
 
-        <div class="graph">
-          <div class="line l1"></div>
-          <div class="line l2"></div>
-          <div class="line l3"></div>
-          <div class="line l4"></div>
-          <div class="line l5"></div>
-          <div class="line l6"></div>
-          <div class="line l7"></div>
+        <div class="chart">
+
+          <div class="bar" style="height: 40%"></div>
+          <div class="bar" style="height: 55%"></div>
+          <div class="bar" style="height: 72%"></div>
+          <div class="bar" style="height: 90%"></div>
+          <div class="bar" style="height: 60%"></div>
+          <div class="bar" style="height: 80%"></div>
+          <div class="bar" style="height: 48%"></div>
+
         </div>
 
-        <small>Últimas 24 horas</small>
+        <p>Últimas 24 horas</p>
+
       </div>
 
     </section>
@@ -112,23 +150,21 @@
 
       <h2>🚨 Alertas Ambientais</h2>
 
-      <div class="alert warning-alert">
+      <div class="alert warning">
         ⚠️ Temperatura acima da média detectada no setor norte.
       </div>
 
-      <div class="alert ok-alert">
-        ✅ Satélite OrbitWatch-01 operando normalmente.
+      <div class="alert danger">
+        🔥 Possível foco de incêndio identificado via satélite.
+      </div>
+
+      <div class="alert safe">
+        ✅ Satélite operando normalmente sem perda de sinal.
       </div>
 
     </section>
 
-  </main>
-
-  <footer>
-    <p>
-      OrbitWatch © 2026 | Global Solution FIAP | Cloud Computing & DevSecOps
-    </p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 
